@@ -8,13 +8,13 @@ public class StringGenerator {
             " mono", " di", " tri", " penta", " hexa", " hepta", " octa", " nona", " deca", " tetra", " "
     };
     public static final String[] CHEM = new String[]{
-            "NEN", "N", "ENEN", "NENENENEN", "NENENE"
+            "NEN", "N", "ENEN", "NENENENEN", "NENENE", "NENEN"
     };
 
     public static String generateSyllable() {
         String sequence = RandomUtil.random(CHEM, RandomUtil.getClientRand());
         StringBuilder out = new StringBuilder();
-        for (int i = 0; i < template.length(); i++) {
+        for (int i = 0; i < sequence.length(); i++) {
             if (sequence.charAt(i) == 'N') {
                 out.append(RandomUtil.random(NUMBERS, RandomUtil.getClientRand()));
             } else {
