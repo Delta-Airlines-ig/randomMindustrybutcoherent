@@ -8,7 +8,7 @@ public class StringGenerator {
             " mono", " di", " tri", " penta", " hexa", " hepta", " octa", " nona", " deca", " tetra", " "
     };
     public static final String[] CHEM = new String[]{
-            "NEN", "N", "ENEN", "NENENENEN", "NENENE", "NENEN"
+            "EN", "ENEN", "ENEN", "ENENENEN", "ENENEN", "ENEN"
     };
 
     public static String generateSyllable() {
@@ -79,7 +79,7 @@ public class StringGenerator {
     public static String generateDrillSuffix() {
         return RandomUtil.random(new String[]{
                 "pact", "act", "matic", "atic", "chal", "al", "ser", "er",
-                "ption", "tion", "blast", "last", "ast", "tary", "pulse"
+                "ption", "tion", "blast", "ast", "tary", "pulse"
         }, RandomUtil.getClientRand());
     }
 
