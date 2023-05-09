@@ -44,13 +44,13 @@ public class StringGenerator {
 
     public static String generateMaterialSuffix() {
         return RandomUtil.random(new String[]{
-            "hydride", "oxide", "carbide", "sulfide", "cloride", "nitride"
+            "hydride", "oxide", "carbide", "sulfide", "cloride", "nitride", "titanate", "nitrate", "fluoride"
         }, RandomUtil.getClientRand());
     }
 
     public static String generateMaterialSuffixType() {
         return RandomUtil.random(new String[]{
-                "Acid", "Oxide", "Carbide", "Nitrate", "Ferrite"
+                "Acid", "Ferrite"
         }, RandomUtil.getClientRand());
     }
 
