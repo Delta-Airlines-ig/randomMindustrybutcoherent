@@ -38,10 +38,13 @@ public class ItemMapper {
             }
             if (!Vars.headless && Core.settings.getBool("rm-sprite-random")) {
                 float hue = RandomUtil.getClientRand().random(360f);
+                float sat = RandomUtil.getClientRand().random(100f);
                 item.color.hue(hue);
                 hues.put(item, hue);
                 TextureGenerator.changeHue(item.fullIcon, hue);
                 TextureGenerator.changeHue(item.uiIcon, hue);
+                TextureGenerator.changeSaturation(item.fullIcon, sat);
+                TextureGenerator.changeSaturation(item.uiIcon, sat);
             }
             item.init();
         }));
