@@ -41,6 +41,20 @@ public class TextureGenerator {
         });
         oldTexture.draw(newPixmap, region.getX(), region.getY());
     }
+        public static void changeSaturation(TextureRegion region, float sat) {
+        if (oldTexture != region.texture) {
+            pixmap = region.texture.getTextureData().consumePixmap();
+            oldTexture = region.texture;
+        }
+        Pixmap newPixmap = new Pixmap(region.width, region.height);
+        runForPixel(region, (x, y) -> {
+            Color color = new Color();
+            color.rgba8888(pixmap.get(x + region.getX(), y + region.getY()));
+            color.saturation(sat);
+            newPixmap.set(x, y, color);
+        });
+        oldTexture.draw(newPixmap, region.getX(), region.getY());
+    }
 
     public static boolean isGray(Color color) {
         for (Color gray : grays)
