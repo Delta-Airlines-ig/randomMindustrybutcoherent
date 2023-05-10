@@ -12,7 +12,7 @@ public class StringGenerator {
     };
 
     public static String generateSyllable() {
-        String elements2 = ELEMENTS;
+        String[] elements2 = ELEMENTS;
         String selectedelement = "?";
         String sequence = RandomUtil.random(CHEM, RandomUtil.getClientRand());
         StringBuilder out = new StringBuilder();
