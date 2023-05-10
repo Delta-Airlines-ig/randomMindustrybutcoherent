@@ -23,7 +23,7 @@ public class StringGenerator {
             } else {
                 selectedelement = RandomUtil.random(elements2, RandomUtil.getClientRand());
                 out.append(selectedelement);
-                elements2.remove(selectedelement);
+                elements2.remove(1);
                 
             }
         }
