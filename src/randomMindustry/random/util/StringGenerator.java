@@ -1,5 +1,7 @@
 package randomMindustry.random.util;
 import java.util.ArrayList;  
+import java.util.Arrays;
+import java.util.List;
 
 public class StringGenerator {
     public static final String[] ELEMENTS = new String[]{
