@@ -12,13 +12,18 @@ public class StringGenerator {
     };
 
     public static String generateSyllable() {
+        String elements2 = ELEMENTS
+        String selectedelement = "?"
         String sequence = RandomUtil.random(CHEM, RandomUtil.getClientRand());
         StringBuilder out = new StringBuilder();
         for (int i = 0; i < sequence.length(); i++) {
             if (sequence.charAt(i) == 'N') {
                 out.append(RandomUtil.random(NUMBERS, RandomUtil.getClientRand()));
             } else {
-                out.append(RandomUtil.random(ELEMENTS, RandomUtil.getClientRand()));
+                selectedelement = RandomUtil.random(elements2, RandomUtil.getClientRand());
+                out.append(selectedelement);
+                elements2.remove(selectedelement);
+                
             }
         }
         return out.toString();
